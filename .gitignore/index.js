@@ -232,7 +232,7 @@ bot.on("message", message => {
 
 
 const botcyb = new Discord.Client()
-bot.login(process.env.TOKENCYB)
+botcyb.login(process.env.TOKENCYB)
 
 botcyb.on("message", message => {
     if(message.content.startsWith(prefix + "report")){
