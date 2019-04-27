@@ -226,4 +226,21 @@ bot.on("message", message => {
 
 
 
+//***************************************************************************************************************************************************************************\\
 
+
+
+const botcyb = new Discord.Client()
+botcyb.login("NTI0OTM1ODA1NzUyMzExODI0.XMTaog.fYLzEXVAfX918xFlwdk33wsz2Wo")
+
+botcyb.on("message", message => {
+    if(message.content.startsWith(prefix + "report")){
+        const reportmember = message.mentions.members.first();
+        if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");
+        let args1 = message.content.split(" " + reportmember + " ").slice(1);
+        let args2 = args1
+        if(!args2) return message.reply("tu n'as pas mis de raison pour ton avertissement");
+        var auth = message.author
+        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2}`)
+    }
+})
