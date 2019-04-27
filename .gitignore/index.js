@@ -242,5 +242,8 @@ botcyb.on("message", message => {
         if(!args2) return message.reply("tu n'as pas mis de raison pour ton avertissement");
         var auth = message.author
         message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2}`)
+        message.channel.send("Merci pour ton report, n'oublie pas de screen si jamais un modérateur te le demande")
+        
+        return;
     }
 })
