@@ -248,7 +248,7 @@ botcyb.on("message", message => {
     }
     if(message.content.startsWith(prefix + "help")){
         let args1 = message.contentslice(1);
-        if(!args1) {
+       // if(!args1) {
         var auth = message.author
         let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
@@ -265,7 +265,7 @@ botcyb.on("message", message => {
          return channelhelp.send(embedhelp);
         })
             return;
-        }else{
+       /* }else{
             if(args1 === " /help") message.reply("Permet de voir la liste des commandes ou de voir leur descriptions en remplacent le deuxième /help que ta mit :wink:.")
             if(args1 === " /ban") message.reply("Permet de bannir un membre temporairement ou définitivement, commande de dynobot.")
             if(args1 === " /kick") message.reply("Permet d'expulsé un membre du serveur, commande par dynobot.")
@@ -275,6 +275,6 @@ botcyb.on("message", message => {
             if(args1 === " /modlogs") message.reply("Permet de voir toute les sanctions d'un joueur, commande de dynobot")
             if(args1 === " !play") message.reply("Permet de faire joué une musique ou une video dans un salon vocal, commande de rythm")
             if(args1 === " !skip") message.reply("Permet de passé a la musique suivante dans la liste des musique, commande de rythm")
-        }
+        }*/
     }
 })
