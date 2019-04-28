@@ -231,7 +231,7 @@ bot.on("message", message => {
 
 
 const botcyb = new Discord.Client()
-botcyb.login("NTI0OTM1ODA1NzUyMzExODI0.XMTaog.fYLzEXVAfX918xFlwdk33wsz2Wo")
+botcyb.login(process.env.TOKENCYB)
 
 botcyb.on("message", message => {
     if(message.content.startsWith(prefix + "report")){
