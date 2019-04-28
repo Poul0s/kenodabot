@@ -249,7 +249,7 @@ botcyb.on("message", message => {
     if(message.content.startsWith(prefix + "help")){
         let args1 = message.content.split(" ").slice(1);
         let args2 = args1
-        if(!args2) {
+        if(!args1) {
         var auth = message.author
         let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
