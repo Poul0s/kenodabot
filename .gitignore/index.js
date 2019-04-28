@@ -247,8 +247,7 @@ botcyb.on("message", message => {
         return;
     }
     if(message.content.startsWith(prefix + "help")){
-        let args1 = message.content.split(" ").slice(1);
-        let args2 = args1
+        let args1 = message.contentslice(1);
         if(!args1) {
         var auth = message.author
         let embedhelp = new Discord.RichEmbed()
@@ -267,15 +266,15 @@ botcyb.on("message", message => {
         })
             return;
         }else{
-            if(args2 === "/help") message.reply("Permet de voir la liste des commandes ou de voir leur descriptions en remplacent le deuxième /help que ta mit :wink:.")
-            if(args2 === "/ban") message.reply("Permet de bannir un membre temporairement ou définitivement, commande de dynobot.")
-            if(args2 === "/kick") message.reply("Permet d'expulsé un membre du serveur, commande par dynobot.")
-            if(args2 === "/mute") message.reply("Permet de rendre un membre muet temporairement ou définitivement, commande de dynobot.")
-            if(args2 === "/report") message.reply("Permet de report un utilisateur a l'équipe de modération en cas d'infractions au règlement, n'oubliez pas le screen.")
-            if(args2 === "/") message.reply("le préfix")
-            if(args2 === "/modlogs") message.reply("Permet de voir toute les sanctions d'un joueur, commande de dynobot")
-            if(args2 === "!play") message.reply("Permet de faire joué une musique ou une video dans un salon vocal, commande de rythm")
-            if(args2 === "!skip") message.reply("Permet de passé a la musique suivante dans la liste des musique, commande de rythm")
+            if(args1 === " /help") message.reply("Permet de voir la liste des commandes ou de voir leur descriptions en remplacent le deuxième /help que ta mit :wink:.")
+            if(args1 === " /ban") message.reply("Permet de bannir un membre temporairement ou définitivement, commande de dynobot.")
+            if(args1 === " /kick") message.reply("Permet d'expulsé un membre du serveur, commande par dynobot.")
+            if(args1 === " /mute") message.reply("Permet de rendre un membre muet temporaire ment ou définitivement, commande de dynobot.")
+            if(args1 === " /report") message.reply("Permet de report un utilisateur a l'équipe de modération en cas d'infractions au règlement, n'oubliez pas le screen.")
+            if(args1 === " /") message.reply("le préfix")
+            if(args1 === " /modlogs") message.reply("Permet de voir toute les sanctions d'un joueur, commande de dynobot")
+            if(args1 === " !play") message.reply("Permet de faire joué une musique ou une video dans un salon vocal, commande de rythm")
+            if(args1 === " !skip") message.reply("Permet de passé a la musique suivante dans la liste des musique, commande de rythm")
         }
     }
 })
