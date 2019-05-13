@@ -303,10 +303,13 @@ bot.on("message", async message => {
     let ping = ["<@293857217365540895>"]
     
     let motbl = false;
-    for (var i in blacklist2) {
-        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) motbl = true;
+    for (var i in ping) {
+        if (message.content.toLowerCase().includes(ping[i].toLowerCase())) motbl = true;
     }
     if(motbl) {
         var auth = message.author
         message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
-    })
+    }
+
+
+})
