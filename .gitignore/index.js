@@ -232,7 +232,7 @@ bot.on("message", message => {
 
 const botcyb = new Discord.Client()
 botcyb.login(process.env.TOKENCYB)
-var prefixcyb = (":CyberTheCrocs:")
+var prefixcyb = ("/")
 
 botcyb.on("message", message => {
     if(message.content.startsWith(prefixcyb + "report")){
