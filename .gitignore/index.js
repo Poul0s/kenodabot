@@ -297,6 +297,10 @@ botcyb.on("message", message => {
         })
             return;
        }
+       if(message.content("<@293857217365540895>")){
+           var auth = message.author
+        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
+       }
 })
 
 
