@@ -279,7 +279,7 @@ botcyb.on("message", message => {
         }
     }
     */
-    if(message.content.startsWith(prefixcyb + "help")){
+    if(message.content === prefixcyb + "help"){
         var auth = message.author
       let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
