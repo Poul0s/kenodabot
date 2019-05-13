@@ -300,7 +300,7 @@ botcyb.on("message", message => {
        
 })
 
-bot.on('message', async message =>  {
+botcyb.on('message', async message =>  {
     let blacklist2 = ['<@293857217365540895>'];
 
     let motbl = false;
