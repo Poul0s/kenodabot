@@ -309,6 +309,6 @@ bot.on("message", async message => {
     if(motbl) {
         var auth = message.author
         message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
-    }
+    });
 
 
