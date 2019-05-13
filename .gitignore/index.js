@@ -228,13 +228,14 @@ bot.on("message", message => {
 
 //***************************************************************************************************************************************************************************\\
 
-/*
+
 
 const botcyb = new Discord.Client()
 botcyb.login(process.env.TOKENCYB)
+var prefixcyb = (":CyberTheCrocs:")
 
 botcyb.on("message", message => {
-    if(message.content.startsWith(prefix + "report")){
+    if(message.content.startsWith(prefixcyb + "report")){
         const reportmember = message.mentions.members.first();
         if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");
         let args1 = message.content.split(" " + reportmember + " ").slice(1);
@@ -246,7 +247,7 @@ botcyb.on("message", message => {
         
         return;
     }
-    if(message.content.startsWith(prefix + "help")){
+   /* if(message.content.startsWith(prefixcyb + "help")){
         let args1 = message.contentslice(1);
         if(!args1) {
         var auth = message.author
@@ -277,8 +278,26 @@ botcyb.on("message", message => {
             if(args1 === " !skip") message.reply("Permet de passé a la musique suivante dans la liste des musique, commande de rythm")
         }
     }
+    */
+    if(message.content.startsWith(prefixcyb + "help")){
+        var auth = messag.author
+      let embedhelp = new Discord.RichEmbed()
+        .setTitle("Liste des commande")
+        .setDescription("Pour voir la description d'une commande, utilise la commande /help <VotreCommande> exemple /help ban")
+        .setColor("FE0000")
+        .addField("Modération", "/ban \n/kick \n/mute \n/report \n/modlogs", true)
+        .addField("Utilitaire", "/help", true)
+        .addField("fun", "", true)
+        .addField("Musique", "!play \n!skip", true)
+        .setFooter("Une crocs")
+        .setTimestamp()
+      message.channel.send("crocs envoyé en privé");
+        auth.createDM().then(function (channelhelp) {
+         return channelhelp.send(embedhelp);
+        })
+            return;
+       }
 })
 
 
 
-*/
