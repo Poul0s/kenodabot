@@ -312,5 +312,3 @@ bot.on("message", async message => {
     }
 
 
-
-<@293857217365540895>
