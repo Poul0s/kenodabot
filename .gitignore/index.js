@@ -297,13 +297,20 @@ botcyb.on("message", message => {
         })
             return;
        }
-    var pinged = message.content.slice(1)
-       if(pinged === "<@293857217365540895>"){
-           
-           var auth = message.author
-        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
-       }
+       
 })
+bot.on("message", async message => {
+    let ping = ["<@293857217365540895>"]
+    
+    let motbl = false;
+    for (var i in blacklist2) {
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) motbl = true;
+    }
+    if(motbl) {
+        var auth = message.author
+        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
+    }
 
 
 
+<@293857217365540895>
