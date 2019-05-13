@@ -280,7 +280,7 @@ botcyb.on("message", message => {
     }
     */
     if(message.content.startsWith(prefixcyb + "help")){
-        var auth = messag.author
+        var auth = message.author
       let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
         .setDescription("Pour voir la description d'une commande, utilise la commande /help <VotreCommande> exemple /help ban")
