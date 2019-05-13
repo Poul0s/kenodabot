@@ -306,7 +306,7 @@ bot.on("message", async message => {
     for (var i in ping) {
         if (message.content.toLowerCase().includes(ping[i].toLowerCase())) motbl = true;
     }
-    if(motbl) {
+    if(motbl === true) {
         var auth = message.author
         message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
     }
