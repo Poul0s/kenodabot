@@ -287,7 +287,7 @@ botcyb.on("message", message => {
         .setColor("FE0000")
         .addField("Modération", "/ban \n/kick \n/mute \n/report \n/modlogs", true)
         .addField("Utilitaire", "/help", true)
-        .addField("fun", "", true)
+        .addField("fun", "rien ici pour l'instant", true)
         .addField("Musique", "!play \n!skip", true)
         .setFooter("Une crocs")
         .setTimestamp()
