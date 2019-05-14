@@ -235,6 +235,7 @@ botcyb.login(process.env.TOKENCYB)
 var prefixcyb = ("/")
 
 botcyb.on("message", message => {
+var auth = message.author
     if(message.content.startsWith(prefixcyb + "report")){
         const reportmember = message.mentions.members.first();
         if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");
@@ -289,6 +290,7 @@ botcyb.on("message", message => {
         .addField("Utilitaire", "/help", true)
         .addField("fun", "rien ici pour l'instant", true)
         .addField("Musique", "!play \n!skip", true)
+        .addField("Administration", "/stop", true)
         .setFooter("Une crocs")
         .setTimestamp()
       message.channel.send("crocs envoyé en privé");
@@ -297,6 +299,17 @@ botcyb.on("message", message => {
         })
             return;
        }
+    if(message.content.startsWith(prefix + "stop")) {
+ if(auth.id === "<@519186194886688779>") {
+message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me r'allumer :'(")
+botcyb.destroy()
+process.exit()
+}else if(auth.id === "<@293857217365540895>") {
+message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me r'allumer :'(")
+botcyb.destroy()
+process.exit()
+}else message.reply("désolé mais tu n'a pas le droit d'utilisé cette commande") 
+}
        
 })
 
@@ -309,6 +322,6 @@ botcyb.on('message', async message =>  {
     }
     if(motbl) {
         var auth = message.author
-    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [ <@519186194886688779> ]`)
+    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
     }
 })
