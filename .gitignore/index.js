@@ -300,11 +300,11 @@ var auth = message.author
             return;
        }
     if(message.content.startsWith(prefix + "stop")) {
- if(auth.id === "<@519186194886688779>") {
+ if(auth.id === "519186194886688779") {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me r'allumer :'(")
 botcyb.destroy()
 process.exit()
-}else if(auth.id === "<@293857217365540895>") {
+}else if(auth.id === "293857217365540895") {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me r'allumer :'(")
 botcyb.destroy()
 process.exit()
