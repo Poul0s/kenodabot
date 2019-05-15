@@ -251,11 +251,9 @@ var auth = message.author
     if(message.content.startsWith(prefix + "clear")) {
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             message.channel.fetchMessages()
-            .then(list => {
                 
                 let list = message.content.split(" ").slice(1)
           message.channel.bulkDelete(list).catch(console.error)
-            })
         }else message.reply("désolé mais tu n'a pas accès a cette commande")
 }
 
