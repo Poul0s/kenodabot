@@ -321,7 +321,7 @@ process.exit()
 }
        
 })
-/*
+
 botcyb.on('message', async message =>  {
     let blacklist2 = ['<@293857217365540895>'];
 
@@ -334,6 +334,8 @@ botcyb.on('message', async message =>  {
     message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
     }
 })
+
+/*
 botcyb.on("ready", ready => {
     botcyb.id("519186194886688779").createDM().then(function (channelstart) {
         return channelstart.send("je vien de me relancé")
