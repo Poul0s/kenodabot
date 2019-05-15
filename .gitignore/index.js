@@ -248,14 +248,7 @@ var auth = message.author
         
         return;
     }
-    if(message.content.startsWith(prefix + "clear")) {
-        if(message.auth.hasPermission(MANAGE_MESSAGES)){
-            message.channel.fetchMessages()
-            .then(list => {
-          message.channel.bulkDelete(list)
-            }, function(err){message.channel.send("Désolé mais, j'ai rencontré une erreur, si ce problème persiste, allé contacter l'admin thunlos qui règlera ce problème au plus vite")})
-    }else message.reply("désolé mais tu n'a pas accès a cette commande")
-}
+
 
    /* if(message.content.startsWith(prefixcyb + "help")){
         let args1 = message.contentslice(1);
