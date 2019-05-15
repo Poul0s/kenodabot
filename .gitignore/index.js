@@ -253,7 +253,7 @@ var auth = message.author
             message.channel.fetchMessages()
                 
                 let list = message.content.split(" ").slice(1)
-If(!list) return message.reply("tu n’a pas mit de nombre de message à supprimer !")
+If(!list) return message.reply("tu n’a pas mit de nombre de message à supprimer")
           message.channel.bulkDelete(list[0]).catch(console.error)
           message.delete(3000)
         }else message.reply("désolé mais tu n'a pas accès a cette commande")
