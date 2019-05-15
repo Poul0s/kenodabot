@@ -254,7 +254,7 @@ var auth = message.author
             .then(list => {
           message.channel.bulkDelete(list)
             }, function(err){message.channel.send("Désolé mais, j'ai rencontré une erreur, si ce problème persiste, allé contacter l'admin thunlos qui règlera ce problème au plus vite")})
-    }else message.repl("désolé mais tu n'a pas accès a cette commande")
+    }else message.reply("désolé mais tu n'a pas accès a cette commande")
 }
 
    /* if(message.content.startsWith(prefixcyb + "help")){
