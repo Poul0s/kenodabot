@@ -312,7 +312,7 @@ process.exit()
 }
        
 })
-
+/*
 botcyb.on('message', async message =>  {
     let blacklist2 = ['<@293857217365540895>'];
 
@@ -330,3 +330,4 @@ botcyb.on("ready", ready => {
         return channelstart.send("je vien de me relancé")
     }).catch(console.error)
 })
+*/
