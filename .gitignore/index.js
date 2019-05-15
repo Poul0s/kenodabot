@@ -235,6 +235,7 @@ botcyb.login(process.env.TOKENCYB)
 var prefixcyb = ("/")
 
 botcyb.on("message", message => {
+var auth = message.author
     if(message.content.startsWith(prefixcyb + "report")){
         const reportmember = message.mentions.members.first();
         if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");
@@ -242,7 +243,7 @@ botcyb.on("message", message => {
         let args2 = args1
         if(!args2) return message.reply("tu n'as pas mis de raison pour ton avertissement");
         var auth = message.author
-        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2}`)
+        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2} \n[mention: <@519186194886688779>]`)
         message.channel.send("Merci pour ton report, n'oublie pas de screen si jamais un modérateur te le demande")
         
         return;
@@ -279,16 +280,17 @@ botcyb.on("message", message => {
         }
     }
     */
-    if(message.content.startsWith(prefixcyb + "help")){
+    if(message.content === prefixcyb + "help"){
         var auth = message.author
       let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
-        .setDescription("Pour voir la description d'une commande, utilise la commande /help <VotreCommande> exemple /help ban")
+        .setDescription("Pour voir la description d'une commande, utilise la commande /aide <VotreCommande> exemple /help ban (soon)")
         .setColor("FE0000")
         .addField("Modération", "/ban \n/kick \n/mute \n/report \n/modlogs", true)
         .addField("Utilitaire", "/help", true)
         .addField("fun", "rien ici pour l'instant", true)
         .addField("Musique", "!play \n!skip", true)
+        .addField("Administration", "/stop", true)
         .setFooter("Une crocs")
         .setTimestamp()
       message.channel.send("crocs envoyé en privé");
@@ -297,11 +299,34 @@ botcyb.on("message", message => {
         })
             return;
        }
-       if(message.content("<@293857217365540895>")){
-           var auth = message.author
-        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber ${message.channel.name} <@519186194886688779>`)
-       }
+    if(message.content.startsWith(prefix + "stop")) {
+ if(auth.id === "519186194886688779") {
+message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
+botcyb.destroy()
+process.exit()
+}else if(auth.id === "293857217365540895") {
+message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
+botcyb.destroy()
+process.exit()
+}else message.reply("désolé mais tu n'a pas le droit d'utilisé cette commande") 
+}
+       
 })
 
+botcyb.on('message', async message =>  {
+    let blacklist2 = ['<@293857217365540895>'];
 
-
+    let motbl = false;
+    for (var i in blacklist2) {
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) motbl = true;
+    }
+    if(motbl) {
+        var auth = message.author
+    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
+    }
+})
+botcyb.on("ready", ready => {
+    ready.id("519186194886688779").createDM().then(function (channelstart) {
+        return channelstart.send("je vien de me relancé")
+    }).catch(console.error)
+})
