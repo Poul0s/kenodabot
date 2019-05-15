@@ -253,7 +253,8 @@ var auth = message.author
             message.channel.fetchMessages()
                 
                 let list = message.content.split(" ").slice(1)
-          message.channel.bulkDelete(list).catch(console.error)
+          message.channel.bulkDelete(list[0]).catch(console.error)
+          message.delete(3000)
         }else message.reply("désolé mais tu n'a pas accès a cette commande")
 }
 
