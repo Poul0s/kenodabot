@@ -339,7 +339,8 @@ botcyb.on('message', async message =>  {
 })
 
 botcyb.on('message', async message =>  {
-    if(!message.channel.name == "🔵pub-discord🔵") {
+    var channel = message.channel.name
+    if(!channel === "🔵pub-discord🔵") {
     var auth = message.author
     let blacklist2 = ['discord.gg/'];
 
