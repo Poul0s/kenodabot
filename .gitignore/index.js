@@ -255,7 +255,8 @@ var auth = message.author
                 let list = message.content.split(" ").slice(1)
 //If(!list) return message.reply("tu n’a pas mit de nombre de message à supprimer")
           message.channel.bulkDelete(list[0]).catch(console.error)
-          message.delete(3000)
+          message.delete()
+          message.channel.bulkDelete(list[0]).catch(console.error)
         }else message.reply("désolé mais tu n'a pas accès a cette commande")
 }
 
@@ -328,27 +329,25 @@ botcyb.on('message', async message =>  {
     var auth = message.author
     let blacklist2 = ['<@293857217365540895>'];
 
-    let motbl = false;
+    let pingbl = false;
     for (var i in blacklist2) {
-        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) motbl = true;
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
     }
-    if(motbl) {
+    if(pingbl) {
     message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
     }
 
 
 
 
-  if(!message.channel.name === "🔵pub-discord🔵") {
-    let blinvite = ['discord.gg/'];
-    let invbl = false
-    for (var y in blinvite) {
-        if (message.content.toLowerCase().includes(blinvite[y].toLowerCase())) invbl = true
-    }
-    if(invbl) {
-        message.delete()
-        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a un lien discord dans ${message.channel.name}`)
-    }
+let insulte = [' fdp ', ' nike ta mère ', ' baise tes mort ', ' ntm ', ' pute ', ' cheh ']
+let motbl = false;
+for (var i in insulte) {
+    if(message.content.toLowerCase().includes(insulte[i].toLowerCase())) motbl = true
+}
+if(motbl) {
+    message.delete()
+    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a dit ${message.content} dans ${message.channel.name}`)
 }
 
 
