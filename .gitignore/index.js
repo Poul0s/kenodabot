@@ -342,8 +342,8 @@ botcyb.on('message', async message =>  {
   if(!message.channel.name === "🔵pub-discord🔵") {
     let blinvite = ['discord.gg/'];
     let invbl = false
-    for (var i in blinvite) {
-        if (message.content.toLowerCase().includes(blinvite[i].toLowerCase())) invbl = true
+    for (var y in blinvite) {
+        if (message.content.toLowerCase().includes(blinvite[y].toLowerCase())) invbl = true
     }
     if(invbl) {
         message.delete()
