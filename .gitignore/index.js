@@ -334,23 +334,24 @@ botcyb.on('message', async message =>  {
         if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
     }
     if(pingbl) {
-    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
+    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} \n [mention: <@519186194886688779> ]`)
     }
 })
 
-botcyb.on('message', async message => {
+botcyb.on('message', async message =>  {
+    if(!message.channel.name === "🔵pub-discord🔵")  {
     var auth = message.author
-    let insulte = [' fdp ', ' nike ta mère ', ' baise tes mort ', ' ntm ', ' pute ', ' cheh ']
-let motbl = false;
-for (var i in insulte) {
-    if(message.content.toLowerCase().includes(insulte[i].toLowerCase())) motbl = true
-}
-if(motbl) {
-    message.delete()
-    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a dit ${message.content} dans ${message.channel.name}`)
+    let blacklist2 = ['discord.gg/'];
+
+    let pingbl = false;
+    for (var i in blacklist2) {
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
+    }
+    if(pingbl) {
+    message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a envoyé un lien discord dans ${message.channel.name} \n [mention: <@519186194886688779> ]`)
+    }
 }
 })
-
 /*
 botcyb.on("ready", ready => {
     botcyb.id("519186194886688779").createDM().then(function (channelstart) {
