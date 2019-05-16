@@ -253,6 +253,7 @@ var auth = message.author
             message.channel.fetchMessages()
                 
                 let list = message.content.split(" ").slice(1)
+//If(!list) return message.reply("tu n’a pas mit de nombre de message à supprimer")
           message.channel.bulkDelete(list[0]).catch(console.error)
           message.delete(3000)
         }else message.reply("désolé mais tu n'a pas accès a cette commande")
@@ -296,8 +297,8 @@ var auth = message.author
         .setTitle("Liste des commande")
         .setDescription("Pour voir la description d'une commande, utilise la commande /aide <VotreCommande> exemple /help ban (soon)")
         .setColor("FE0000")
-        .addField("Modération", "/ban \n/kick \n/mute \n/report \n/modlogs", true)
-        .addField("Utilitaire", "/help", true)
+        .addField("Modération", "/ban \n/kick \n/mute \n/clear \n/modlogs", true)
+        .addField("Utilitaire", "/help \n/report", true)
         .addField("fun", "rien ici pour l'instant", true)
         .addField("Musique", "!play \n!skip", true)
         .addField("Administration", "/stop", true)
