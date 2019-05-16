@@ -324,6 +324,7 @@ process.exit()
 })
 
 botcyb.on('message', async message =>  {
+    var auth = message.author
     let blacklist2 = ['<@293857217365540895>'];
 
     let motbl = false;
@@ -331,9 +332,27 @@ botcyb.on('message', async message =>  {
         if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) motbl = true;
     }
     if(motbl) {
-        var auth = message.author
     message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
     }
+
+
+
+
+  if(!message.channel.name === "🔵pub-discord🔵") {
+    let blinvite = ['discord.gg/'];
+    let invbl = false
+    for (var i in blinvite) {
+        if (message.content.toLowerCase().includes(blinvite[i].toLowerCase())) invbl = true
+    }
+    if(invbl) {
+        message.delete()
+        message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a un lien discord dans ${message.channel.name}`)
+    }
+}
+
+
+
+
 })
 
 /*
