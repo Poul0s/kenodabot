@@ -336,11 +336,11 @@ botcyb.on('message', async message =>  {
     if(pingbl) {
     message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a mentionné cyber dans ${message.channel.name} [mention: <@519186194886688779> ]`)
     }
+})
 
-
-
-
-let insulte = [' fdp ', ' nike ta mère ', ' baise tes mort ', ' ntm ', ' pute ', ' cheh ']
+botcyb.on('message', async message => {
+    var auth = message.author
+    let insulte = [' fdp ', ' nike ta mère ', ' baise tes mort ', ' ntm ', ' pute ', ' cheh ']
 let motbl = false;
 for (var i in insulte) {
     if(message.content.toLowerCase().includes(insulte[i].toLowerCase())) motbl = true
@@ -349,10 +349,6 @@ if(motbl) {
     message.delete()
     message.guild.channels.find("name", "💪salon-staff💪").send(`${auth} a dit ${message.content} dans ${message.channel.name}`)
 }
-
-
-
-
 })
 
 /*
