@@ -243,7 +243,14 @@ var auth = message.author
         let args2 = args1
         if(!args2) return message.reply("tu n'as pas mis de raison pour ton avertissement");
         var auth = message.author
-        message.guild.channels.find("name", "crocs-logs").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2} \n[mention: <@519186194886688779>]`)
+        let reportembed = new Discord.RichEmbed()
+        .setTitle(`Report de ${auth}`)
+        .setColor("FFFF00")
+        .addField("Salon", `${message.channel.name}`, true)
+        .addField("Utilisateur", `${reportmember}`, true)
+        .addField("Raison", `${args2}`, true)
+        message.guild.channels.find("name", "crocs-logs").send(reportembed + "Mention [<@519186194886688779>]")
+  //      message.guild.channels.find("name", "crocs-logs").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2} \n[mention: <@519186194886688779>]`)
         message.channel.send("Merci pour ton report, n'oublie pas de screen si jamais un modérateur te le demande")
         
         return;
@@ -306,6 +313,7 @@ var auth = message.author
         .setFooter("Une crocs")
         .setTimestamp()
       message.channel.send("crocs envoyé en privé");
+      message.guild.channels.find("name", "crocs-logs").send(`${auth} a exécuté la commande /help dans le salon ${message.channel.name}`)
         auth.createDM().then(function (channelhelp) {
          return channelhelp.send(embedhelp);
         })
