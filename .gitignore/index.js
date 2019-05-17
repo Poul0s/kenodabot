@@ -249,7 +249,8 @@ var auth = message.author
         .addField("Salon", `${message.channel.name}`, true)
         .addField("Utilisateur", `${reportmember}`, true)
         .addField("Raison", `${args2}`, true)
-        message.guild.channels.find("name", "crocs-logs").send(reportembed + "Mention [<@519186194886688779>]")
+        message.guild.channels.find("name", "crocs-logs").send(reportembed)
+        message.guild.channels.find("name", "crocs-logs").send("Mention <@519186194886688779>")
   //      message.guild.channels.find("name", "crocs-logs").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args2} \n[mention: <@519186194886688779>]`)
         message.channel.send("Merci pour ton report, n'oublie pas de screen si jamais un modérateur te le demande")
         
