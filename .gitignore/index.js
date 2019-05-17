@@ -244,7 +244,7 @@ var auth = message.author
         if(!args2) return message.reply("tu n'as pas mis de raison pour ton avertissement");
         var auth = message.author
         let reportembed = new Discord.RichEmbed()
-        .setTitle(`Report de ${auth.user}`)
+        .setTitle(`Report de ${auth.user.username}`)
         .setColor("FFFF00")
         .addField("Salon", `${message.channel.name}`, true)
         .addField("Utilisateur", `${reportmember}`, true)
