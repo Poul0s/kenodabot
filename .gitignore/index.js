@@ -259,7 +259,7 @@ fs.readdir("./commandscyb/", (err, files) => {
 
 botcyb.on("message", message => {
 var auth = message.author
-    if(message.content.startsWith(prefix + "clear")) {
+   /* if(message.content.startsWith(prefix + "clear")) {
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             message.channel.fetchMessages()
                 
