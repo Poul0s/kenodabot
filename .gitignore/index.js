@@ -243,7 +243,7 @@ fs.readdir("./commandscyb/", (err, files) => {
       return;
     }
     jsfile.forEach((f, i) =>{
-      let props = require(`./commands/${f}`);
+      let props = require(`./commandscyb/${f}`);
       console.log(`${f} à bien été chargé`);
       botcyb.commandscyb.set(props.help.name, props);
     });
