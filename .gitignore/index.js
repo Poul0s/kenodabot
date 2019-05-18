@@ -292,7 +292,7 @@ var auth = message.author
         }
     }
     */
-    if(message.content === prefixcyb + "help"){
+  /*  if(message.content === prefixcyb + "help"){
         var auth = message.author
       let embedhelp = new Discord.RichEmbed()
         .setTitle("Liste des commande")
@@ -311,7 +311,7 @@ var auth = message.author
          return channelhelp.send(embedhelp);
         })
             return;
-       }
+    } */
     if(message.content.startsWith(prefix + "stop")) {
  if(auth.id === "519186194886688779") {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
