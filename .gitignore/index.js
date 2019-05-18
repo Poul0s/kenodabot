@@ -292,32 +292,8 @@ var auth = message.author
         }
     }
     */
-  /*  if(message.content === prefixcyb + "help"){
-        var auth = message.author
-      let embedhelp = new Discord.RichEmbed()
-        .setTitle("Liste des commande")
-        .setDescription("Pour voir la description d'une commande, utilise la commande /aide <VotreCommande> exemple /help ban (soon)")
-        .setColor("FE0000")
-        .addField("Modération", "/ban \n/kick \n/mute \n/clear \n/modlogs", true)
-        .addField("Utilitaire", "/help \n/report", true)
-        .addField("fun", "rien ici pour l'instant", true)
-        .addField("Musique", "!play \n!skip", true)
-        .addField("Administration", "/stop", true)
-        .setFooter("Une crocs")
-        .setTimestamp()
-      message.channel.send("crocs envoyé en privé");
-      message.guild.channels.find("name", "crocs-logs").send(`${auth} a exécuté la commande /help dans le salon ${message.channel.name}`)
-        auth.createDM().then(function (channelhelp) {
-         return channelhelp.send(embedhelp);
-        })
-            return;
-    } */
     if(message.content.startsWith(prefix + "stop")) {
- if(auth.id === "519186194886688779") {
-message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
-botcyb.destroy()
-process.exit()
-}else if(auth.id === "293857217365540895") {
+ if(message.member.hasPermission("ADMINISTRATOR")) {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
 botcyb.destroy()
 process.exit()
