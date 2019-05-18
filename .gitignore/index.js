@@ -266,11 +266,11 @@ botcyb.on("message", message => {
   .setImage("http://www.parisenligne.com/wp-content/imgs/image-liste-noire-70.jpg")
    if(message.content.startsWith(prefix)) {
     if(message.guild.id === "517032764571385857") {
-    }else{ if(message.guild.id === "540175708840787997"){
-    }else {
+    }else if(message.guild.id === "540175708840787997"){
+    }else{
         message.delete()
         return message.channel.send(blackembed)
-    }}}})
+    }}})
 
 botcyb.on("message", message => {
 var auth = message.author
