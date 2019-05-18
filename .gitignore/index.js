@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const ms = require ("ms");
+const fs = require("fs")
 var prefix = ("/")
 bot.login(process.env.TOKEN)
 
@@ -232,7 +233,29 @@ bot.on("message", message => {
 
 const botcyb = new Discord.Client()
 botcyb.login(process.env.TOKENCYB)
+botcyb.commandscyb = new Discord.Collection();
 var prefixcyb = ("/")
+fs.readdir("./commandscyb/", (err, files) => {
+    if(err) console.log(err);
+    let jsfile = files.filter(f => f.split(".").pop() === "js")
+    if(jsfile.length <= 0){
+      console.log("Je ne trouve pas les commandes");
+      return;
+    }
+    jsfile.forEach((f, i) =>{
+      let props = require(`./commands/${f}`);
+      console.log(`${f} à bien été chargé`);
+      botcyb.commandscyb.set(props.help.name, props);
+    });
+  });
+  botcyb.on("message", async message => {
+    let auth = message.author
+    let messageArray = message.content.split(" ")
+    let cmd = messageArray[0];
+    let args = message.content.split(" ").slice(1);
+    let commandfile = botcyb.commandscyb.get(cmd.slice(prefix.length));
+    if(commandfile) commandfile.run(botcyb,message,args,auth);
+});
 
 botcyb.on("message", message => {
 var auth = message.author
