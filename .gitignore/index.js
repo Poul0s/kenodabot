@@ -259,16 +259,6 @@ fs.readdir("./commandscyb/", (err, files) => {
 
 botcyb.on("message", message => {
 var auth = message.author
-   /* if(message.content.startsWith(prefix + "clear")) {
-        if(message.member.hasPermission("MANAGE_MESSAGES")){
-            message.channel.fetchMessages()
-                
-                let list = message.content.split(" ").slice(1)
-          message.channel.bulkDelete(list[0]).catch(console.error)
-          message.delete()
-          message.channel.bulkDelete(list[0]).catch(console.error)
-        }else message.reply("désolé mais tu n'a pas accès a cette commande")
-}
 
    /* if(message.content.startsWith(prefixcyb + "help")){
         let args1 = message.contentslice(1);
