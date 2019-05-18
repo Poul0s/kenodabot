@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 module.exports.run = async (bot, message, args, auth) => {
     let embedhelplog = new Discord.RichEmbed()
-    .setTitle(`Commande exécuté par ${auth}`)
+    .setTitle(`Commande help exécuté par ${auth}`)
     .setColor("00FF00")
     .addField("Salon", `${message.channel.name}`)
     let embedhelp = new Discord.RichEmbed()
