@@ -258,7 +258,7 @@ fs.readdir("./commandscyb/", (err, files) => {
 });
 
 
-bot.on("message", message => {
+botcyb.on("message", message => {
     var blackembed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setTitle("Commande impossible à effectuer!")
