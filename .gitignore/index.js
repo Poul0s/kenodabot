@@ -265,7 +265,8 @@ botcyb.on("message", message => {
   .addField("vous ne pouvez pas exécuté de message ici car vous n'êtes pas autorisé à utilisé le bot dans ce serveur là, pour plsu d'information, veuillez contacté thunlos", true)
   .setImage("http://www.parisenligne.com/wp-content/imgs/image-liste-noire-70.jpg")
    if(message.content.startsWith(prefix)) {
-    if(!message.guild.id === "517032764571385857") {
+    if(message.guild.id === "517032764571385857") {
+    }else {
         message.delete()
         return message.channel.send(blackembed)
     }
