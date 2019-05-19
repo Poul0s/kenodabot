@@ -326,7 +326,13 @@ botcyb.on('message', async message =>  {
         if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
     }
     if(pingbl) {
-    message.guild.channels.find("name", "crocs-logs").send(`${auth} a mentionné cyber dans ${message.channel.name} \n [mention: <@519186194886688779> ]`)
+        let embedping = new Discord.RichEmbed()
+        .setTitle("Ping cyber")
+        .setColor("FE0000")
+        .addField(`salon`, `${message.channel.name}`, true)
+        .addField("Auteur", `${auth}`)
+    message.guild.channels.find("name", "crocs-logs").send(embedping)
+    message.guild.channels.find("name", "crocs-logs").send("[mention: <@519186194886688779>")
     }
 })
 
