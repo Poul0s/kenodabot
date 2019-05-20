@@ -16,7 +16,8 @@ module.exports.run = async (bot, message, args, auth) => {
     .setFooter("Une crocs")
     .setTimestamp()
   message.channel.send("crocs envoyé en privé");
-  message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
+  if(message.channel.name === "🤖commandes-bots🤖") {}else message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
+  
     auth.createDM().then(function (channelhelp) {
      return channelhelp.send(embedhelp);
     })
