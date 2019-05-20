@@ -358,3 +358,9 @@ botcyb.on("ready", ready => {
     }).catch(console.error)
 })
 */
+
+botcyb.on("message", message => {
+    let list = message.guild.memberCount
+    let list2 = (`Utilisateur total: ${list}`)
+    if(list2 === message.guild.channels.find("id", "580093284211228681").name){}else  message.guild.channels.find("id", "580093284211228681").edit({ name: list2 })
+})
