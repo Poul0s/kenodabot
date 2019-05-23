@@ -20,6 +20,7 @@ let addroleUser = message.mentions.members.first();
          return message.reply("le roles que tu veux ajouté est plus grand que le tiens...")
      }
      addroleUser.addRole(addrole2)
+     message.guild.channels.find("name", "crocs-logs").send(`${auth} a ajouté le role ${addrole2} à ${addroleUser}`)
 }
 module.exports.help = {
     name: "role"
