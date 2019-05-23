@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-module.exports.run = async (bot, message, args, auth) => {
+module.exports.run = async (botcyb, message, args, auth) => {
     let embedhelplog = new Discord.RichEmbed()
     .setTitle(`Commande help exécuté par ${auth}`)
     .setColor("00FF00")

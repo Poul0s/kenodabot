@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-module.exports.run = async (bot, message, args, auth) => {
+module.exports.run = async (botcyb, message, args, auth) => {
 
     const reportmember = message.mentions.members.first();
     if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");

@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-module.exports.run = async (bot, message, args, auth) => {
+module.exports.run = async (botcyb, message, args, auth) => {
     if(message.member.hasPermission("MANAGE_MESSAGES")){
         message.channel.fetchMessages()
             
