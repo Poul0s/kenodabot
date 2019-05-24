@@ -355,17 +355,17 @@ botcyb.on('message', async message =>  {
 }
 }
 })
-/*
+
 botcyb.on("ready", ready => {
-    botcyb.id("519186194886688779").createDM().then(function (channelstart) {
+    botcyb.users.id("519186194886688779").createDM().then(function (channelstart) {
         return channelstart.send("je vien de me relancé")
     }).catch(console.error)
 })
-*/
-/*
-botcyb.on("message", message => {
+
+
+
+bot.on("guildMemberRemove", member => {
     let list = message.guild.memberCount
     let list2 = (`Utilisateur total: ${list}`)
-    if(list2 === message.guild.channels.find("id", "580093284211228681").name){}else  message.guild.channels.find("id", "580093284211228681").edit({ name: list2 })
+    member.guild.channels.find("id", "580093284211228681").edit({ name: list2 })
 })
-*/
