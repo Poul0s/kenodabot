@@ -357,9 +357,12 @@ botcyb.on('message', async message =>  {
 })
 
 botcyb.on("ready", ready => {
-    Client.user("id", "519186194886688779").createDM().then(function (channelstart) {
+    /*.user("id", "519186194886688779").createDM().then(function (channelstart) {
         return channelstart.send("je vien de me relancé")
+
     }).catch(console.error)
+    */
+   botcyb.guilds.find("id","540175708840787997").channels.find("id", "571996266104619008").send("Je viens de me relancé")
 })
 
 
