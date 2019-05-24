@@ -339,7 +339,7 @@ botcyb.on('message', async message =>  {
 botcyb.on('message', async message =>  {
     if(message.channel.name === "🔵pub-discord🔵") {
     }else{
-        if(message.author.id === "293857217365540895") {}else{
+        if(message.member.hasPermission("ADMINISTRATOR")) {}else{
 
         
     var auth = message.author
