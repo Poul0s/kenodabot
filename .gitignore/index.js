@@ -311,7 +311,7 @@ var auth = message.author
  if(message.member.hasPermission("ADMINISTRATOR")) {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
 botcyb.destroy()
-process.exit()
+process.exit(60000)
 }else message.reply("désolé mais tu n'a pas le droit d'utilisé cette commande") 
 }
        
