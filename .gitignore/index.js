@@ -339,6 +339,9 @@ botcyb.on('message', async message =>  {
 botcyb.on('message', async message =>  {
     if(message.channel.name === "🔵pub-discord🔵") {
     }else{
+        if(message.author.id === "293857217365540895") {}else{
+
+        
     var auth = message.author
     let blacklist2 = ['discord.gg/'];
 
@@ -349,6 +352,7 @@ botcyb.on('message', async message =>  {
     if(pingbl) {
     message.guild.channels.find("name", "crocs-logs").send(`${auth} a envoyé un lien discord dans ${message.channel.name} \n [mention: <@519186194886688779> ]`)
     }
+}
 }
 })
 /*
