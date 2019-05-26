@@ -16,7 +16,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 7", "Ne pas utiliser le débat pain au chocolat ou chocolatine dans le salon débat-nul sous peine d'un warn au premier avertissement de mute au second puis de ban au troisième.", true)
     .addField("Article 8", "Ne pas faire de demande de dons d'argent ou autre sous peine de mute au premier avertissement ou ban si répétitif", true)
     .setColor("#2BB257")
-    .setTimestamp(`Modifié le 26/05/2019 à 18h25`)
+    .setFooter(`Modifié le 26/05/2019 à 18h25`)
 
     if(auth.id === "519186194886688779") {
     message.channel.send(embedrule)
