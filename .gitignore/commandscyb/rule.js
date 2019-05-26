@@ -18,7 +18,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .setColor("#2BB257")
     .setFooter(`Modifié le 26/05/2019 à 18h25`)
 
-    if(auth.id === "519186194886688779") {
+    if(auth.id === "5191861948866788779") {
     message.channel.send(embedrule)
     }else message.reply("Tu n'as pas les permissions pour faire cela").setTimeout(() => {
         message.delete()
