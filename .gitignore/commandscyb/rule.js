@@ -20,9 +20,9 @@ module.exports.run = async (botcyb, message, args, auth) => {
 
     if(auth.id === "5191861948866788779") {
     message.channel.send(embedrule)
-    }else message.reply("Tu n'as pas les permissions pour faire cela").setTimeout(() => {
-        message.delete()
-    }, 2000);
+    }else {message.reply("Tu n'as pas les permissions pour faire cela")
+    setTimeout(message.delete, 2000)
+}
 
 }
 module.exports.help = {
