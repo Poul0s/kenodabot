@@ -24,5 +24,5 @@ module.exports.run = async (botcyb, message, args, auth) => {
 
 }
 module.exports.help = {
-    name: "editrules"
+    name: "/editrules"
 }

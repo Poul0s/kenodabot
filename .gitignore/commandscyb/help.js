@@ -24,5 +24,5 @@ module.exports.run = async (botcyb, message, args, auth) => {
         return;
 }
 module.exports.help = {
-    name: "help"
+    name: "/help"
 }

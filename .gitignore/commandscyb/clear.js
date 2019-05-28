@@ -9,5 +9,5 @@ module.exports.run = async (botcyb, message, args, auth) => {
     }else message.reply("désolé mais tu n'a pas accès a cette commande")
 }
 module.exports.help = {
-    name: "clear"
+    name: "/clear"
 }

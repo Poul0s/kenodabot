@@ -9,5 +9,5 @@ var embed = new Discord.RichEmbed()
 .addField("En construction", "j'ai dit en construction !!!", true)
 }
 module.exports.help = {
-    name: "profle"
+    name: "/profle"
 }

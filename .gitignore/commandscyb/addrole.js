@@ -23,5 +23,5 @@ let addroleUser = message.mentions.members.first();
      message.guild.channels.find("name", "crocs-logs").send(`${auth} a ajouté le role ${addrole2} à ${addroleUser}`)
 }
 module.exports.help = {
-    name: "role"
+    name: "/role"
 }
