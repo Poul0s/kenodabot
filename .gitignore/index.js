@@ -253,7 +253,7 @@ fs.readdir("./commandscyb/", (err, files) => {
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0];
     let args = message.content.split(" ").slice(1);
-    let commandfile = botcyb.commandscyb.get(cmd.slice(prefix.length));
+    let commandfile = botcyb.commandscyb.get(cmd.slice(prefixcyb.length));
     if(commandfile) commandfile.run(botcyb,message,args,auth);
 });
 
@@ -264,7 +264,7 @@ botcyb.on("message", message => {
   .setTitle("commande impossible à effectuer!")
   .addField("vous ne pouvez pas exécuté de message ici car vous n'êtes pas autorisé à utilisé le bot dans ce serveur là, pour plsu d'information, veuillez contacté thunlos", "****", true)
   .setImage("http://www.parisenligne.com/wp-content/imgs/image-liste-noire-70.jpg")
-   if(message.content.startsWith(prefix)) {
+   if(message.content.startsWith(prefixcyb)) {
     if(message.guild.id === "517032764571385857") {
     }else if(message.guild.id === "540175708840787997"){
     }else{
@@ -307,7 +307,7 @@ var auth = message.author
         }
     }
     */
-    if(message.content.startsWith(prefix + "stop")) {
+    if(message.content.startsWith(prefixcyb + "stop")) {
  if(message.member.hasPermission("ADMINISTRATOR")) {
 message.reply("D'accord je suis ne train de m'eteindre, n'oublie pas de me rallumer :'(")
 botcyb.destroy()
