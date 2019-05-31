@@ -368,5 +368,5 @@ botcyb.on("ready", ready => {
         let list2 = (`Utilisateur total: ${list}`)
         botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
     }
-    setInterval(fonctionedit, 30000)
+    setInterval(fonctionedit, 1800000)
  })
