@@ -361,8 +361,11 @@ botcyb.on("ready", ready => {
 })
 
 botcyb.on("ready", ready => {
-    let list = message.guild.memberCount
+    
+    var fonctionedit = function () {
+        let list = botcyb.guilds.find("id","540175708840787997").memberCount
     let list2 = (`Utilisateur total: ${list}`)
-    var fonctionedit = function () {botcyb.guilds.find("id","540175708840787997").channels.find("id", "571996266104619008").edit({ name: list2})}
+        botcyb.guilds.find("id","540175708840787997").channels.find("id", "571996266104619008").edit({ name: list2})
+    }
     setInterval(fonctionedit, 30000)
  })
