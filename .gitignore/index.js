@@ -359,14 +359,19 @@ botcyb.on('message', async message =>  {
 botcyb.on("ready", ready => {
    botcyb.guilds.find("id","540175708840787997").channels.find("id", "571996266104619008").send("Je viens de me relancé")
 })
-
-botcyb.on("ready", ready => {
-    
-    var fonctionedit = function () {
-        let list = botcyb.guilds.find("id","517032764571385857").memberCount
-        console.log(list)
-        let list2 = (`Utilisateur total: ${list}`)
-        botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
-    }
-    setInterval(fonctionedit, 1800000)
+ botcyb.on("guildMemberRemove", member => {
+    let list = botcyb.guilds.find("id","517032764571385857").memberCount
+    console.log(list)
+    let list2 = (`Utilisateur total: ${list}`)
+    botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
  })
+
+ botcyb.on("guildMemberAdd", member => {
+    let list = botcyb.guilds.find("id","517032764571385857").memberCount
+    console.log(list)
+    let list2 = (`Utilisateur total: ${list}`)
+    botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
+})
+
+
+ 
