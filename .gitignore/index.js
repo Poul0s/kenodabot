@@ -356,18 +356,21 @@ botcyb.on('message', async message =>  {
 })
 
 botcyb.on("ready", ready => {
-    /*.user("id", "519186194886688779").createDM().then(function (channelstart) {
-        return channelstart.send("je vien de me relancé")
-
-    }).catch(console.error)
-    */
    botcyb.guilds.find("id","540175708840787997").channels.find("id", "571996266104619008").send("Je viens de me relancé")
 })
-
-
-
-bot.on("guildMemberRemove", member => {
-    let list = message.guild.memberCount
+ botcyb.on("guildMemberRemove", member => {
+    let list = botcyb.guilds.find("id","517032764571385857").memberCount
+    console.log(list)
     let list2 = (`Utilisateur total: ${list}`)
-    member.guild.channels.find("id", "580093284211228681").edit({ name: list2 })
+    botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
+ })
+
+ botcyb.on("guildMemberAdd", member => {
+    let list = botcyb.guilds.find("id","517032764571385857").memberCount
+    console.log(list)
+    let list2 = (`Utilisateur total: ${list}`)
+    botcyb.guilds.find("id","517032764571385857").channels.find("id", "580093284211228681").edit({name: list2})
 })
+
+
+ 
