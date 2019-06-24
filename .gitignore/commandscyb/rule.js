@@ -15,8 +15,10 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 6.3", "Ne pas ping cyber/poke puis supprimé le message sous peine de mute au premier avertissement ou ban si répétitif", true)
     .addField("Article 7", "Ne pas utiliser le débat pain au chocolat ou chocolatine dans le salon débat-nul sous peine d'un warn au premier avertissement de mute au second puis de ban au troisième.", true)
     .addField("Article 8", "Ne pas faire de demande de dons d'argent ou autre sous peine de mute au premier avertissement ou ban si répétitif", true)
+    .addField("Article 9.1", "Toutes menaces de hack/dox/ddos ou autre est sévèrement bannissable", true)
+    .addField("Article 9.2", "Toutes tentatives de raid sur le serveur est strictement interdit et bannissable très sévèrement", true)
     .setColor("#2BB257")
-    .setFooter(`Modifié le 26/05/2019 à 18h25`)
+    .setFooter(`Modifié le 24/06/2019 à 20:50`)
 
     if(auth.id === "519186194886688779") {
     message.channel.send(embedrule)
