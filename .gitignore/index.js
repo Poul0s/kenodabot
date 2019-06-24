@@ -332,7 +332,7 @@ botcyb.on('message', async message =>  {
         .addField(`salon`, `${message.channel.name}`, true)
         .addField("Auteur", `${auth}`)
     message.guild.channels.find("name", "crocs-logs").send(embedping)
-    message.guild.channels.find("name", "crocs-logs").send("<@&587697856903905281>")
+    message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
     }
 })
 
@@ -350,7 +350,7 @@ botcyb.on('message', async message =>  {
         if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
     }
     if(pingbl) {
-    message.guild.channels.find("name", "crocs-logs").send(`${auth} a envoyé un lien discord dans ${message.channel.name} (<@&587697856903905281>))`)
+    message.guild.channels.find("name", "crocs-logs").send(`${auth} a envoyé un lien discord dans ${message.channel.name} (<@&517053064792899584>))`)
     }
 }
 }
