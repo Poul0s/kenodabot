@@ -21,6 +21,7 @@ bot.on("message", message => {
 })
 
 bot.on("message", message => {
+    if(message.guild.id === "600394400631095297") {
     if(message.author.id === "159985870458322944") {
     if(message.content.startsWith("GG")) {
         const member = message.mentions.members.first()
@@ -31,7 +32,7 @@ bot.on("message", message => {
      if(lvl === "16!") member.addRole(message.guild.roles.find("name", `astro amateur`))
      if(lvl === "26!") member.addRole(message.guild.roles.find("name", `astro pro`))
     }
-}
+}}
 })
 
 bot.on("message", message => {
