@@ -21,6 +21,20 @@ bot.on("message", message => {
 })
 
 bot.on("message", message => {
+    if(message.author.id === "159985870458322944") {
+    if(message.content.startsWith("GG")) {
+        const member = message.mentions.members.first()
+     let lvl_type1 = message.content.split(" " + member + ", you just advanced to level ").slice(1)
+     let lvl = lvl_type1
+     if(lvl === "5!") member.addRole(message.guild.roles.find("name", `astro débutant`))
+     if(lvl === "10!") member.addRole(message.guild.roles.find("name", `astro confirmé`))
+     if(lvl === "16!") member.addRole(message.guild.roles.find("name", `astro amateur`))
+     if(lvl === "26!") member.addRole(message.guild.roles.find("name", `astro pro`))
+    }
+}
+})
+
+bot.on("message", message => {
     if(message.content.startsWith(prefix + "warn")) {
         let warnRole = message.guild.roles.find("name", "PermWarn");
       if(message.member.roles.has(warnRole.id)) {
