@@ -16,7 +16,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 7", "Le débat "Pain au chocolat/Chocolatine" est interdit.", true)
     .addField("Article 8", "Les demandes de dont sont interdites (IG ou IRL) sous peine d'un mute, et ban si répétitif.", true)
     .addField("Article 9.0", "Toute menace de Hack est sévèrement sanctionnée par un ban.", true)
-    .addField("Article 9.1", "Toutes tentatives de raid sur le serveur est strictement interdit et bannissable très sévèrement", true)
+    .addField("Article 9.1", "Toute tentative de raid le serveur est strictement interdite et est sévèrement sanctionnée par un ban.", true)
     .setColor("#2BB257")
     .setFooter(`Modifié le 24/06/2019 à 20:50`)
 
