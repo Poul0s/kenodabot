@@ -19,7 +19,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 9.1", "Toute tentative de raid le serveur est strictement interdite et est sévèrement sanctionnée par un ban.", true)
     .addField("Article 10", "Toute publicité pour des serveurs reward est interdite", true)
     .setColor("#2BB257")
-    .setFooter(`Cordialement. \nLe staff de la CrocsArmy. \nModifié le 24/06/2019 à 20:50`)
+    .setFooter(`Cordialement. \nLe staff de la CrocsArmy. \nModifié le 10/08/2019 à 16h30`)
 
     if(auth.id === "519186194886688779") {
     message.channel.send(embedrule)
