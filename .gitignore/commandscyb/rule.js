@@ -9,7 +9,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 1", "Toujours insulter le bot Mee6 quand il envoie un message de level (Règle non obligatoire, pas de grosses insultes, juste un "tg" suffit). ", true)
     .addField("Article 2", "Ne pas spam/flood le chat.", true)
     .addField("Article 3", "Toute image/gif/fichier audio sont à mettre dans #💾fichiers-audios-vidéos💾 , sauf les photos de vous qui vont dans #🤳trombinoscope🤳 .", true)
-    .addField("Article 4", "Ne pas insulter un membre du serveur sous peine de warn au premier avertissement, de mute au second, de ban au troisième.", true)
+    .addField("Article 4", "Ne pas insulter quiconque.", true)
     .addField("Article 5", "Pour les modérateur, toujour screen le message lors d'une infraction du règlement avant de le supprimer sous peine de warn au premier avertissement, de unrank au second.", true)
     .addField("Article 6.1", "Ne pas tenté de ping everyone sous peine d'un warn au premier avertissement, un mute au second puis un ban au troisième.", true)
     .addField("Article 6.2", "Ne pas ping cyber/poke pour une chose inutile sous peine d'un warn au premier avertissement, un mute au second puis un ban au troisième.", true)
