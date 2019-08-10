@@ -5,7 +5,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     
     let embedrule = new Discord.RichEmbed()
     .setTitle("Règlement")
-    .setDescription("Sanctions:\nPremière fois : Warn\nDeuxième fois : Mute\nTroisième fois : Ban\nLes sanctions sont appliquées de cette manière si aucune autre manière n'est indiquée sur la règle.")
+    .setDescription("Sanctions:\n Première fois : Warn\n Deuxième fois : Mute\n Troisième fois : Ban\n Les sanctions sont appliquées de cette manière si aucune autre manière n'est indiquée sur la règle.")
     .addField("Article 1", "Toujours insulter mee6 quand il envoi un message de level up (règle non obligatoire, ne pas l'insulter lourdement, juste dire tg ou autre petite insulte comme ca)", true)
     .addField("Article 2", "Ne pas spam/flood le chat sous peine de warn au premier avertissement, de mute au second, de ban au troisième.", true)
     .addField("Article 3", "Ne pas envoyé de lien/d'image/gif autre part que dans les salon appropriés", true)
