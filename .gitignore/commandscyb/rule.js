@@ -7,7 +7,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .setTitle("Règlement")
     .setDescription("Sanctions:\n Première fois : Warn\n Deuxième fois : Mute\n Troisième fois : Ban\n Les sanctions sont appliquées de cette manière si aucune autre manière n'est indiquée sur la règle.")
     .addField("Article 1", "Toujours insulter le bot Mee6 quand il envoie un message de level (Règle non obligatoire, pas de grosses insultes, juste un "tg" suffit). ", true)
-    .addField("Article 2", "Ne pas spam/flood le chat sous peine de warn au premier avertissement, de mute au second, de ban au troisième.", true)
+    .addField("Article 2", "Ne pas spam/flood le chat.", true)
     .addField("Article 3", "Ne pas envoyé de lien/d'image/gif autre part que dans les salon appropriés", true)
     .addField("Article 4", "Ne pas insulter un membre du serveur sous peine de warn au premier avertissement, de mute au second, de ban au troisième.", true)
     .addField("Article 5", "Pour les modérateur, toujour screen le message lors d'une infraction du règlement avant de le supprimer sous peine de warn au premier avertissement, de unrank au second.", true)
