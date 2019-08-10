@@ -12,7 +12,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 4", "Ne pas insulter quiconque.", true)
     .addField("Article 5", "Ne pas essayer de ping everyone/here.", true)
     .addField("Article 6.0", "Ne pas ping Cyber et PokeDraco pour des choses inutiles.", true)
-    .addField("Article 6.1", "Ne pas ping cyber/poke pour une chose inutile sous peine d'un warn au premier avertissement, un mute au second puis un ban au troisième.", true)
+    .addField("Article 6.1", "Si vous mentionnez Cyber ou PokeDraco pour rien, ne supprimez pas le message sous peine de mute, et ban si répétitif.", true)
     .addField("Article 7", "Ne pas utiliser le débat pain au chocolat ou chocolatine dans le salon débat-nul sous peine d'un warn au premier avertissement de mute au second puis de ban au troisième.", true)
     .addField("Article 8", "Ne pas faire de demande de dons d'argent ou autre sous peine de mute au premier avertissement ou ban si répétitif", true)
     .addField("Article 9.1", "Toutes menaces de hack/dox/ddos ou autre est sévèrement bannissable", true)
