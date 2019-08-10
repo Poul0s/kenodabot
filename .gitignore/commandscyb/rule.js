@@ -14,9 +14,9 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Article 6.0", "Ne pas ping Cyber et PokeDraco pour des choses inutiles.", true)
     .addField("Article 6.1", "Si vous mentionnez Cyber ou PokeDraco pour rien, ne supprimez pas le message sous peine de mute, et ban si répétitif.", true)
     .addField("Article 7", "Le débat "Pain au chocolat/Chocolatine" est interdit.", true)
-    .addField("Article 8", "Ne pas faire de demande de dons d'argent ou autre sous peine de mute au premier avertissement ou ban si répétitif", true)
-    .addField("Article 9.1", "Toutes menaces de hack/dox/ddos ou autre est sévèrement bannissable", true)
-    .addField("Article 9.2", "Toutes tentatives de raid sur le serveur est strictement interdit et bannissable très sévèrement", true)
+    .addField("Article 8", "Les demandes de dont sont interdites (IG ou IRL) sous peine d'un mute, et ban si répétitif.", true)
+    .addField("Article 9.0", "Toutes menaces de hack/dox/ddos ou autre est sévèrement bannissable", true)
+    .addField("Article 9.1", "Toutes tentatives de raid sur le serveur est strictement interdit et bannissable très sévèrement", true)
     .setColor("#2BB257")
     .setFooter(`Modifié le 24/06/2019 à 20:50`)
 
