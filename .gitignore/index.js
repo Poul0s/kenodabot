@@ -338,11 +338,10 @@ botcyb.on('message', async message =>  {
 
     let pingbl = false;
     for (var i in blacklist2) {
-         //if (message.member.hasPermission("ADMINISTRATOR")) {}else{
+         if (message.member.hasPermission("ADMINISTRATOR")) {}else{
 
         if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl2(message.channel.name, auth, message)
-    }// }
-    // début
+    } }
 
 function pingbl2(cname, author, msg) {
     let embedping = new Discord.RichEmbed()
@@ -354,9 +353,6 @@ function pingbl2(cname, author, msg) {
     msg.guild.channels.find("name", "crocs-logs").send(embedping)
     msg.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
 }
-
-
-    // fin
 })
 
 botcyb.on('message', async message =>  {
