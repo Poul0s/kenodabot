@@ -340,11 +340,11 @@ botcyb.on('message', async message =>  {
     for (var i in blacklist2) {
          //if (message.member.hasPermission("ADMINISTRATOR")) {}else{
 
-        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl(message.author.name, auth, message)
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl2(message.author.name, auth, message)
     }// }
     // début
 
-function pingbl(cname, author, msg) {
+function pingbl2(cname, author, msg) {
     let embedping = new Discord.RichEmbed()
         .setTitle("Ping cyber")
         .setColor("FE0000")
