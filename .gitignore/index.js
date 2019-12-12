@@ -338,17 +338,25 @@ botcyb.on('message', async message =>  {
 
     let pingbl = false;
     for (var i in blacklist2) {
-        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl = true;
-    }
-    if(pingbl) {
-        let embedping = new Discord.RichEmbed()
+         //if (message.member.hasPermission("ADMINISTRATOR")) {}else{
+
+        if (message.content.toLowerCase().includes(blacklist2[i].toLowerCase())) pingbl(message.author.name, auth, message)
+    }// }
+    // début
+
+function pingbl(cname, author, msg) {
+    let embedping = new Discord.RichEmbed()
         .setTitle("Ping cyber")
         .setColor("FE0000")
-        .addField(`salon`, `${message.channel.name}`, true)
-        .addField("Auteur", `${auth}`)
-    message.guild.channels.find("name", "crocs-logs").send(embedping)
-    message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
-    }
+        .addField(`salon`, `${cname}`, true)
+        .addField("Auteur", `${author}`)
+        .setTimestamp()
+    msg.guild.channels.find("name", "crocs-logs").send(embedping)
+    msg.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
+}
+
+
+    // fin
 })
 
 botcyb.on('message', async message =>  {
