@@ -17,7 +17,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     var send = message.guild.channels.find("name", "crocs-logs").send(reportembed)
 //      message.guild.channels.find("name", "crocs-logs").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args11} \n[mention: <@519186194886688779>]`)
     message.channel.send("Votre report a été signalé à l'équipe de modération, n'oublie pas de screen si jamais un modérateur te le demande \nTout abus de report est sanctionnable")
-    send.react(':white_check_mark:', ':negative_squared_cross_mark:')
+    send.react('✅', '❎')
     return;
 }
 module.exports.help = {
