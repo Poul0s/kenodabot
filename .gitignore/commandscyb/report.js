@@ -4,7 +4,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     const reportmember = message.mentions.members.first();
     if (!reportmember) return message.reply("Tu n'as pas mentionner d'utilisateur.");
     let args10 = message.content.split(" " + reportmember + " ").slice(1);
-    let args2 = args10
+    let args11 = args10
     if(!args11) return message.reply("tu n'as pas mis de raison pour ton avertissement");
     var auth = message.author
     let reportembed = new Discord.RichEmbed()
