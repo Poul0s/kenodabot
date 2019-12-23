@@ -15,9 +15,8 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Raison", `${args11}`, true)
     message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
     var sen = await message.guild.channels.find("name", "crocs-logs").send(reportembed)
-//      message.guild.channels.find("name", "crocs-logs").send(`${auth} a report ${reportmember} dans le channel ${message.channel.name}pour: ${args11} \n[mention: <@519186194886688779>]`)
     message.channel.send("Votre report a été signalé à l'équipe de modération, n'oublie pas de screen si jamais un modérateur te le demande \nTout abus de report est sanctionnable")
-    sen.react("\u2705")
+    sen.react("\u2705").catch(error.id)
     sen.react("\u274e")
     return;
 }
