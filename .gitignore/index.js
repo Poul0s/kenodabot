@@ -345,7 +345,7 @@ botcyb.on('message', async message =>  {
         .setTitle("Ping cyber")
         .setColor("FE0000")
         .addField(`salon`, `${message.channel.name}`, true)
-        .addField("Auteur", `${auth}`)
+        .addField("Auteur", `${auth.username} (${auth.id})`)
     message.guild.channels.find("name", "crocs-logs").send(embedping)
     message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
     }
