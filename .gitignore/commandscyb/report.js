@@ -16,8 +16,8 @@ module.exports.run = async (botcyb, message, args, auth) => {
     message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
     var sen = await message.guild.channels.find("name", "crocs-logs").send(reportembed)
     message.channel.send("Votre report a été signalé à l'équipe de modération, n'oublie pas de screen si jamais un modérateur te le demande \nTout abus de report est sanctionnable")
-    sen.react("\u2705").catch(error.id)
-    sen.react("\u274e")
+    sen.react("\u2705").catch(console.error())
+    sen.react("\u274e").catch(console.error())
     return;
 }
 module.exports.help = {
