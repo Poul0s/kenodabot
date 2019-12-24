@@ -9,8 +9,6 @@ module.exports.run = async (botcyb, message, args, auth) => {
         var util = ""
         var exutil = ""
         var permission = "Tout le monde à accès à cette commande"
-     message.reply(args)
-     message.reply("/ban")
      switch (args) {
             case '/ban' :
            var desc = "La commande /ban permet d'interdire l'accès au serveur à un certain utilisateur pour une infraction qu'il a commise."
@@ -19,8 +17,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
             var permission = "Utilisation seulement autorisé aux membres du staff ayant le grade modérateur ou plus."
             embred(desc, util, exutil, permission)
             break;
-            default:
-                 auth.createDM().then(function (soo) { return soo.send("Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide. Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
+            // default: auth.createDM().then(function (soo) { return soo.send("Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide. Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
         }
        function embred(desc, util, exutil, permission) {
      var embedaide = new Discord.RichEmbed()
