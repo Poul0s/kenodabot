@@ -12,7 +12,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .addField("Utilitaire", "/report", true)
     .addField("fun", "rien ici pour l'instant", true)
     .addField("Musique", "!play \n!skip", true)
-    .addField("Administration", "/stop \n/addrole \n/profile \n/clearwarn", true)
+    .addField("Administration", "/addrole \n/clearwarn", true)
     .setFooter("Une crocs")
     .setTimestamp()
   message.channel.send("crocs envoyé en privé");

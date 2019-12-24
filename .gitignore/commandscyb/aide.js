@@ -108,6 +108,44 @@ module.exports.run = async (botcyb, message, args, auth) => {
          break;
 
 
+         case `!play`:
+            case `play`:
+            var desc = "La commande !play permet de jouer une musique ou de l'ajouter dans la file d'attente si une musique est déjà en cours de lecture(La commande est a exécuter seulement si vous êtes dans le salon vocal musique."
+            var util = "La commande s'utilise avec le nom de la musique ou le lien youtube."
+            var exutil = "!p https://www.youtube.com/watch?v=H_rZMgS5nE4"
+         // var permission = ""
+         embred(desc, util, exutil, permission)
+         break;
+
+         case `!skip`:
+            case `skip`:
+            var desc = "La commande !skip permet de passer à la musique suivante qui est dans la file d'attente des musique"
+            var util = "La commande s'utilise seulement avec !skip"
+            var exutil = "!skip"
+         // var permission = ""
+         embred(desc, util, exutil, permission)
+         break;
+
+         case `/addrole`:
+            case `addrole`:
+            var desc = "La commande /addrole permet d'ajouter un role à un membre."
+            var util = "La commande s'utilise avec le tag du membre suivi du nom du role."
+            var exutil = "/addrole <@519186194886688779> [Bg] (Cela va ajouter le role BG à thunlos)"
+            var permission = "L'utilisation de la commande require la permission MANAGE_ROLE."
+         embred(desc, util, exutil, permission)
+         break;
+
+
+         case `/clearwarn`:
+            case `clearwarn`:
+            var desc = "La commande /clearwarn permet d'enlever tout les avertissement d'un membre du serveur."
+            var util = "La commande s'utilise avec le tag du membre."
+            var exutil = "/clearwarn <@519186194886688779>"
+            var permission = "L'utilisation de cette commande require le grade Admibistrateur ou plus."
+         embred(desc, util, exutil, permission)
+         break;
+
+
        /*  t        case `/`:
             case ``:
             var desc = ""
@@ -118,7 +156,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
          break; */
 
 
-            default: auth.createDM().then(function (soo) { return soo.send("Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide. Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
+            default: auth.createDM().then(function (soo) { return soo.send("Mauvaise syntaxe. Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide. Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
         }
        function embred(desc, util, exutil, permission) {
      var embedaide = new Discord.RichEmbed()
