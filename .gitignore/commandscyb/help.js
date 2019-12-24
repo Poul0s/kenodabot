@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 module.exports.run = async (botcyb, message, args, auth) => {
     let embedhelplog = new Discord.RichEmbed()
-    .setTitle(`Commande help exécuté par ${auth}`)
+    .setTitle(`Commande help exécuté par ${auth.username} (${auth})`)
     .setColor("00FF00")
     .addField("Salon", `${message.channel.name}`)
     let embedhelp = new Discord.RichEmbed()
@@ -16,7 +16,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .setFooter("Une crocs")
     .setTimestamp()
   message.channel.send("crocs envoyé en privé");
-  if(message.channel.name === "🤖commandes-bots🤖") {}else message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
+  if(message.channel.id === "553345227684052992" || message.channel.id === "548181748572356628") {}else message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
   
     auth.createDM().then(function (channelhelp) {
      return channelhelp.send(embedhelp);
