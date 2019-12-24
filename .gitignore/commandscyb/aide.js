@@ -32,7 +32,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
 
             case `/kick`:
             case `kick`:
-                var desc = "La commande /kick permet d'expulsé un certain membre pour une infraction qu'il a commise."
+                var desc = "La commande /kick permet d'expulsé un certain membre du serveur pour une infraction qu'il a commise."
                 var util = "La commande s'utilise avec le tag du membre à expulsé suivi de la raison." 
                 var exutil = "/kick <@330407299606904844> pseudo incorrect (Kit_de_tchoin sera expulsé avec la raison pseudo incorrect.)."
                 var permission = "Utilisation seulement autorisé aux membres du staff ayant le grade modérateur-test ou plus."
