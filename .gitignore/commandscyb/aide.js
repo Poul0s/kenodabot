@@ -9,7 +9,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
         var util = ""
         var exutil = ""
         var permission = "Tout le monde à accès à cette commande"
-     
+     message.reply(args)
      
      switch (args) {
             case "/ban":
