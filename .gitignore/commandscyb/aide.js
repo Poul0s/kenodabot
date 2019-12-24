@@ -156,7 +156,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
          break; */
 
 
-            default: auth.createDM().then(function (soo) { return soo.send("Mauvaise syntaxe. Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide. Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
+            default: auth.createDM().then(function (soo) { return soo.send("Mauvaise syntaxe. Utilise la commande /help pour voir la liste des commande que tu peux utilisé avec la commande /aide (Exemple /aide report). Si vous trouvez une erreur, merci de contactez <@519186194886688779>") })
         }
        function embred(desc, util, exutil, permission) {
      var embedaide = new Discord.RichEmbed()
