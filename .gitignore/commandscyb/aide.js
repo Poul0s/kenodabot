@@ -9,6 +9,16 @@ module.exports.run = async (botcyb, message, args, auth) => {
         var exutil = ""
         var permission = "Tout le monde à accès à cette commande"
         var argss = `${args}`
+
+
+        message.channel.send("aide envoyé en privé")
+        let embedhelplog = new Discord.RichEmbed()
+    .setTitle(`Commande help exécuté par ${auth.username} (${auth})`)
+    .setColor("00FF00")
+    .addField("Salon", `${message.channel.name}`)
+
+
+    if(message.channel.id === "553345227684052992" || message.channel.id === "548181748572356628") {}else message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
      switch (argss) {
             case `/ban`:
             case `ban`:
@@ -88,8 +98,17 @@ module.exports.run = async (botcyb, message, args, auth) => {
     embred(desc, util, exutil, permission)
     break;
 
+    case `/report`:
+            case `report`:
+            var desc = "La commande /report permet d'avertir le staff d'un membre qui a commis une infraction."
+            var util = "La commande s'utilise avec le tag du membre ayant commis l'infraction suivit de la raison."
+            var exutil = "/report <@330407299606904844> son pseudo est incorrect (<@330407299606904844> va être report au staff pour son pseudo)"
+         // var permission = ""
+         embred(desc, util, exutil, permission)
+         break;
 
-       /*   case `/`:
+
+       /*  t        case `/`:
             case ``:
             var desc = ""
             var util = ""
