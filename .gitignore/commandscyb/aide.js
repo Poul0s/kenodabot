@@ -10,9 +10,10 @@ module.exports.run = async (botcyb, message, args, auth) => {
         var exutil = ""
         var permission = "Tout le monde à accès à cette commande"
      message.reply(args)
-     
-     switch (args) {
-            case "/ban":
+     let argss = "'" + args + "'"
+     message.reply(argss)
+     switch (argss) {
+            case '/ban' :
            var desc = "La commande /ban permet d'interdire l'accès au serveur à un certain utilisateur pour une infraction qu'il a commise."
             var util = "La commande s'utilise avec le tag du membre à bannir suivi du temp (optionnel) en seconde(sec)/minute(min)/heure(h)/jour(d)/mois(m) et de la raison pour finir." 
             var exutil = "/ban <@276060004262477825> 10min mentheur (Koya sera banni durant 10 minute car c'est un mentheur. PS: la raison mentheur n'est pas une raison suffisante pour bannir un membre.) "
