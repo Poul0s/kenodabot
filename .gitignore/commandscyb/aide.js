@@ -13,7 +13,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
 
         message.channel.send("aide envoyé en privé")
         let embedhelplog = new Discord.RichEmbed()
-    .setTitle(`Commande help exécuté par ${auth.username} (${auth})`)
+    .setTitle(`Commande aide exécuté par ${auth.username} (${auth})`)
     .setColor("00FF00")
     .addField("Salon", `${message.channel.name}`)
 
