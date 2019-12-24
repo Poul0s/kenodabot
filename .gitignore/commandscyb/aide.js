@@ -4,12 +4,11 @@ module.exports.run = async (botcyb, message, args, auth) => {
     auth.createDM().then(function (soon) {
      return soon.send("la commande /aide est en cours de développement par le plus beau des rebeu THUNLOS");
     })   
-     var argss = args
      var desc = ""
         var util = ""
         var exutil = ""
         var permission = "Tout le monde à accès à cette commande"
-     switch (argss) {
+     switch (args) {
             case '/ban' :
            var desc = "La commande /ban permet d'interdire l'accès au serveur à un certain utilisateur pour une infraction qu'il a commise."
             var util = "La commande s'utilise avec le tag du membre à bannir suivi du temp (optionnel) en seconde(sec)/minute(min)/heure(h)/jour(d)/mois(m) et de la raison pour finir." 
@@ -21,8 +20,8 @@ module.exports.run = async (botcyb, message, args, auth) => {
         }
        function embred(desc, util, exutil, permission) {
      var embedaide = new Discord.RichEmbed()
-        .setTitle(`Commande ${argss}`)
-        .setDescription(`Voici l'utilisation de la commande ${argss}`)
+        .setTitle(`Commande ${args}`)
+        .setDescription(`Voici l'utilisation de la commande ${args}`)
         .setColor("FE0000")
         .addField("Description", desc, true)
         .addField("Utilisation", util, true)
