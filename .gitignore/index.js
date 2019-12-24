@@ -267,7 +267,7 @@ fs.readdir("./commandscyb/", (err, files) => {
     let auth = message.author
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0];
-    let args = message.content.split(" ").slice(1);
+    var args = message.content.split(" ").slice(1);
     let commandfile = botcyb.commandscyb.get(cmd/*.slice(prefixcyb.length)*/);
     if(commandfile) commandfile.run(botcyb,message,args,auth);
 });
