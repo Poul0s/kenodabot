@@ -11,7 +11,7 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .setTitle(`Report de ${auth.username} (${auth.id})`)
     .setColor("FFFF00")
     .addField("Salon", `${message.channel.name}`, true)
-    .addField("Utilisateur", `${reportmember}`, true)
+    .addField("Utilisateur", `${reportmember} (${reportmember})`, true)
     .addField("Raison", `${args11}`, true)
     message.guild.channels.find("name", "crocs-logs").send("<@&517053064792899584>")
     var sen = await message.guild.channels.find("name", "crocs-logs").send(reportembed)

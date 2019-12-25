@@ -16,7 +16,11 @@ module.exports.run = async (botcyb, message, args, auth) => {
     .setFooter("Une crocs")
     .setTimestamp()
   message.channel.send("crocs envoyé en privé");
-  if(message.channel.id === "553345227684052992" || message.channel.id === "548181748572356628") {}else message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
+  if(message.channel.id === "553345227684052992" || message.channel.id === "548181748572356628") {}else {
+   var sen = await message.guild.channels.find("name", "crocs-logs").send(embedhelplog)
+   sen.react("\u2705").catch(console.error())
+    sen.react("\u274e").catch(console.error())
+  }
   
     auth.createDM().then(function (channelhelp) {
      return channelhelp.send(embedhelp);
